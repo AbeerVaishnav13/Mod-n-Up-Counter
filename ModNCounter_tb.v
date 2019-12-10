@@ -5,7 +5,7 @@ module ModNCounter_tb ();
 
 	reg clk;
 	reg clr;
-	wire [1:0]Q;
+	wire [2:0]Q;
 
 	ModNCounter myCounter(clk, clr, Q);
 

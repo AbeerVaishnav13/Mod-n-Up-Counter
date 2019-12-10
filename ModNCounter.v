@@ -1,21 +1,21 @@
 module ModNCounter (
 	input clk,    // Clock
 	input clr,  // Asynchronous clear
-	output [1:0]Q
+	output [2:0]Q
 );
 
-reg [1:0]Q;
+reg [2:0]Q;
 
 always @(posedge clk or negedge clr) 
 begin 
 	if(~clr) 
 	begin
-		Q <= 2'b00;
+		Q <= 3'b000;
 	end 
 
-	else if(Q == 2'b10)
+	else if(Q == 3'b110)
 	begin 
-		Q <= 2'b00;
+		Q <= 3'b000;
 	end
 
 	else 
